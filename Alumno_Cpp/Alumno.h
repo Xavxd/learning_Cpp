@@ -33,8 +33,12 @@ Alumno::Alumno(string nombre,string carrera,string escuela,int edad,int no_mat){
     this-> no_mat=no_mat;
 }
     
-Alumno::~Alumno()
-{
+Alumno::~Alumno(){
+    nombre="";
+    carrera="";
+    escuela="";
+    edad=0;
+    no_mat=0;
 }
 
 //get to number of asignatures

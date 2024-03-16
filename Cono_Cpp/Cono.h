@@ -35,6 +35,9 @@ Cono::Cono(float r,float l,float h){
 }
 
 Cono::~Cono(){
+    r=0.0;
+    l=0.0;
+    h=0.0;
 }
 
 const double Cono::PI = 3.14159265358979323846;
