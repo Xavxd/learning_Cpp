@@ -55,6 +55,7 @@ int main(){
                 cout<<"ingrese el salario recibido: "<<endl;
                 cin>>salario;
                 empleado= new Empleado(edad,nombre,rfc,direccion,email,redsocial,telefono,salario);
+                empleado->mostrar_persona();
                 break;
             case 3:
                 cout<<"saliendo..."<<endl;
