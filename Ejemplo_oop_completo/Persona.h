@@ -11,13 +11,11 @@ class Persona{
         string nombre;
         int edad;
         // 5 datos extra
-        int cantidad_idiomas;
-        double peso,estatura;
-        string color_cabello,nacionalidad;
+        string direccion,email,redsocial,telefono,rfc;
     public:
         //constructores
         Persona();
-        Persona(int edad, string nombre);
+        Persona(int edad, string nombre,string rfc,string direccion, string email, string redsocial,string telefono);
         ~Persona();
 
         //getter y setters
@@ -26,16 +24,16 @@ class Persona{
         int get_edad();
         void set_nombre(string nombre);
         string get_nombre();
-        void set_cantidad_idiomas(int cantidad_idiomas);
-        int get_cantidad_idiomas();
-        void set_peso(double peso);
-        double get_peso();
-        void set_estatura(double estatura);
-        double get_estatura();
-        void set_color_cabello(string color_cabello);
-        string get_color_cabello();
-        void set_nacionalidad(string nacionalidad);
-        string get_nacionalidad();
+        void set_rfc(string rfc);
+        string get_rfc();
+        void set_direccion(string direccion);
+        string get_direccion();
+        void set_email(string email);
+        string get_email();
+        void set_redsocial(string redsocial);
+        string get_redsocial();
+        void set_telefono(string telefono);
+        string get_telefono();
         /*siempre habra un metodo para retornar toda la info de un objeto,como en este caso de persona
         y la palabra virtual nos permitira sobreescribir esta funcion en clases heredadas*/
         virtual string mostrar_persona();
@@ -45,15 +43,25 @@ class Persona{
 Persona::Persona(){
     /*este constructor es usado para casos en los que se necesite crear un objeto persona 
     sin datos ya especificados para poder asignarle datos despues seria usando los setters*/
-    edad=0;
-    nombre="";
+    this->edad=0;
+    this->nombre="";
+    this->direccion="";
+    this->email="";
+    this->redsocial="";
+    this->telefono="";
+    this->rfc="";
 }
 
 //constructor con parametros
-Persona::Persona(int edad, string nombre){
+Persona::Persona(int edad, string nombre,string rfc,string direccion, string email, string redsocial,string telefono){
     //this indica que se usa la variable de la clase y la variable asignada es el parametro del constructor
     this->edad=edad;
     this->nombre=nombre;
+    this->rfc=rfc;
+    this->direccion=direccion;
+    this->email=email;
+    this->redsocial=redsocial;
+    this->telefono=telefono;
 }
 //el destructor de objeto se encarga de limpiar la memoria ya usada una vez ue el objeto no es necesario
 Persona::~Persona(){}
@@ -75,49 +83,52 @@ string Persona::get_nombre(){
     return nombre;
 }
 
-void Persona::set_cantidad_idiomas(int cantidad_idiomas){
-    this->cantidad_idiomas=cantidad_idiomas;
+void Persona::set_rfc(string rfc){
+    this->rfc=rfc;
 }
 
-int Persona::get_cantidad_idiomas(){
-    return cantidad_idiomas;
+string Persona::get_rfc(){
+    return rfc;
 }
 
-void Persona::set_peso(double peso){
-    this->peso=peso;
+void Persona::set_direccion(string direccion){
+    this->direccion=direccion;
 }
 
-double Persona::get_peso(){
-    return peso;
+string Persona::get_direccion(){
+    return direccion;
 }
 
-void Persona::set_estatura(double estatura){
-    this->estatura=estatura;
+void Persona::set_email(string email){
+    this->email=email;
 }
 
-double Persona::get_estatura(){
-    return estatura;
+string Persona::get_email(){
+    return email;
 }
 
-void Persona::set_color_cabello(string color_cabello){
-    this->color_cabello=color_cabello;
+void Persona::set_redsocial(string redsocial){
+    this->redsocial=redsocial;
 }
 
-string Persona::get_color_cabello(){
-    return color_cabello;
+string Persona::get_redsocial(){
+    return redsocial;
 }
 
-void Persona::set_nacionalidad(string nacionalidad){
-    this->nacionalidad=nacionalidad;
+void Persona::set_telefono(string telefono){
+    this ->telefono=telefono;
 }
 
-string Persona::get_nacionalidad(){
-    return nacionalidad;
+string Persona::get_telefono(){
+    return telefono;
 }
 /*este es un metodo que se usa para obtener toda la informacion de un objeto en especifico 
 en caso de ser necesario y se considera una buena practica usarlo*/
+
 string Persona::mostrar_persona(){
-    return "nombre: "+nombre+"\n"+"edad: "+ to_string(edad);
+    string str_1="nombre: "+nombre+"\nedad: "+ to_string(edad)+"\nrfc: "+rfc;
+    string str_2="\ndireccion: "+direccion+"\ne-mail: "+email+"\nred social: "+redsocial +"\ntelefono: "+telefono;
+    return str_1+str_2;
 }
 
 #endif
