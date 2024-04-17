@@ -13,9 +13,7 @@ class Esfera : public Circulo{
     Esfera(string nombre,float radio);
     Esfera();
     ~Esfera();
-     //getters y setters
-    void set_altura(float altura);
-    float get_altura();
+     //getters y setter
     void set_volumen(float volumen);
     float get_volumen();
     //metodos
