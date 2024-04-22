@@ -52,8 +52,9 @@ void Esfera::calcular_area(){
 }
 
 string Esfera::mostrar_datos(){
-    return "Nombre: "+get_nombre()+"Radio: "+to_string(get_radio())+"Area: "+to_string(get_area())+
+    return "Nombre: "+get_nombre()+"\nRadio: "+to_string(get_radio())+"\nArea: "+to_string(get_area())+
     "\nVolumen: "+to_string(get_volumen());
 }
+
 
 #endif

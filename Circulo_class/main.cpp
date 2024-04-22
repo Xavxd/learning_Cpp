@@ -42,13 +42,17 @@ int main(){
             cout<<"Ingrese el valor de la altura"<<endl;
             cin>>altura;
             cono=new Cono(nombre,radio,altura,generatriz);
-            cout<<cono->mostrar_datos()<<endl;
+            cono->calcular_area();
+            cono->calcular_volumen();
+            cout<<"-----------------------------\n"<<cono->mostrar_datos()<<"-----------------------------\n"<<endl;
             break;
         case 2:
             /* esfera */
             leer_datos();
             esfera=new Esfera(nombre,radio);
-            cout<<esfera->mostrar_datos()<<endl;
+            esfera->calcular_area();
+            esfera->calcular_volumen();
+            cout<<"-----------------------------\n"<<esfera->mostrar_datos()<<"-----------------------------\n"<<endl;
             break;
         case 3:
             /* cilindro */
@@ -56,13 +60,16 @@ int main(){
             cout<<"Ingrese el valor de la altura"<<endl;
             cin>>altura;
             cilindro=new Cilindro(nombre,radio,altura);
-            cout<<cilindro->mostrar_datos()<<endl;
+            cilindro->calcular_area();
+            cilindro->calcular_volumen();
+            cout<<"-----------------------------\n"<<cilindro->mostrar_datos()<<"-----------------------------\n"<<endl;
             break;
         case 4:
             /* circulo */
             leer_datos();
             circulo= new Circulo(nombre,radio);
-            cout<<circulo->mostrar_datos()<<endl;
+            circulo->calcular_area();
+            cout<<"-----------------------------\n"<<circulo->mostrar_datos()<<"-----------------------------\n"<<endl;
             break;
         case 5:
             cout<<"hasta luego"<<endl;
@@ -84,7 +91,7 @@ void menu(){
 
 void leer_datos(){
     cout<<"Ingrese el nombre del objeto"<<endl;
-    cin>>nombre;
+    getline(cin,nombre);
     cout<<"Ingrese el radio"<<endl;
     cin>>radio;
 }

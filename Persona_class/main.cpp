@@ -19,6 +19,7 @@ int main(){
     int num_mat;
     double cali_m;
     float salario;
+    string str;
     /*No se pueden instanciar objetos dentro de un switch por lo que se instancian desde afuera*/
     Estudiante* estudiante=nullptr;
     Empleado* empleado=nullptr;
@@ -37,7 +38,7 @@ int main(){
         switch (opt){
             case 1:
                 /* code */
-                //lectura_var_comunes();
+                lectura_var_comunes();
                 cout<<"ingrese la cantidad de materias: "<<endl;
                 cin>>num_mat;
                 for(int i=0;i<num_mat;i++){
@@ -47,7 +48,7 @@ int main(){
                 }
                 estudiante= new Estudiante(edad,nombre,rfc,direccion,email,redsocial,telefono,num_mat);
                 estudiante->calcular_promedio(calif);//calculando el promedio del estudiante
-                estudiante->mostrar_persona();
+                cout<<"---------------------------\n"<<estudiante->mostrar_persona()<<"---------------------------\n"<<endl;
                 break;
             case 2:
                 /* code */
@@ -55,7 +56,8 @@ int main(){
                 cout<<"ingrese el salario recibido: "<<endl;
                 cin>>salario;
                 empleado= new Empleado(edad,nombre,rfc,direccion,email,redsocial,telefono,salario);
-                empleado->mostrar_persona();
+                empleado->mostrar_persona();                
+                cout<<"---------------------------\n"<<empleado->mostrar_persona()<<"---------------------------\n"<<endl;
                 break;
             case 3:
                 cout<<"saliendo..."<<endl;
@@ -76,17 +78,17 @@ void menu(){
 
 void lectura_var_comunes(){
     cout<<"ingrese su nombre: "<<endl;
-    cin>>nombre;
+    getline(cin,nombre);
     cout<<"ingrese su edad: "<<endl;
     cin>>edad;
     cout<<"ingrese su rfc: "<<endl;
-    cin>>rfc;
+    getline(cin,rfc);
     cout<<"ingrese su direccion: "<<endl;
-    cin>>direccion;
+    getline(cin,direccion);
     cout<<"ingrese su e-mail: "<<endl;
-    cin>>email;
+    getline(cin,email);
     cout<<"ingrese la red social que usa: "<<endl;
-    cin>>redsocial;
+    getline(cin,redsocial);
     cout<<"ingrese su telefono: "<<endl;
-    cin>>telefono;
+    getline(cin,telefono);
 }

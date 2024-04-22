@@ -64,8 +64,8 @@ void Cilindro::calcular_area(){
 }
 
 string Cilindro::mostrar_datos(){
-    return "Nombre: "+get_nombre()+"Radio: "+to_string(get_radio())+"\nAltura: "+to_string(get_altura())+
-     "Area: "+to_string(get_area())+"\nVolumen: "+to_string(get_volumen());
+    return "Nombre: "+get_nombre()+"\nRadio: "+to_string(get_radio())+"\nAltura: "+to_string(get_altura())+
+     "\nArea: "+to_string(get_area())+"\nVolumen: "+to_string(get_volumen());
 }
 
 #endif
