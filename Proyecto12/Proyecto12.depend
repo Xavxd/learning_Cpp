@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1713384481 source:c:\users\ice\desktop\proyecto12\src\monitor.cpp
+	"Monitor.h"
+
+1713384481 c:\users\ice\desktop\proyecto12\include\monitor.h
+	<iostream>
+
+1713384481 source:c:\users\ice\desktop\proyecto12\src\tarjeta.cpp
+	"Tarjeta.h"
+
+1713384481 c:\users\ice\desktop\proyecto12\include\tarjeta.h
+	<iostream>
+
