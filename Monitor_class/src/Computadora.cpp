@@ -1,4 +1,5 @@
-#include "Computadora.h"
+#include "../include/Computadora.h"
+/*se necesita (../) para indicar que tiene que buscar el archivo en una carpeta fuera de la actual que es "src"*/
 #include <string>
 
 

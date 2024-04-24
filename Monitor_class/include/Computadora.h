@@ -1,8 +1,8 @@
 #ifndef COMPUTADORA_H
 #define COMPUTADORA_H
 #include <iostream>
-#include <Monitor.h>
-#include <Tarjeta.h>
+#include "Monitor.h"
+#include "Tarjeta.h"
 using std::string;
 
 class Computadora:public Monitor,public Tarjeta
@@ -28,4 +28,4 @@ class Computadora:public Monitor,public Tarjeta
         string muestra_computadora();
 };
 
-#endif // COMPUTADORA_H
+#endif 

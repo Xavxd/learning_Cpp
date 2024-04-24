@@ -1,4 +1,4 @@
-#include "Tarjeta.h"
+#include "../include/Tarjeta.h"
 #include <string>
 
 Tarjeta::Tarjeta()
